@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Amazon</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS */
+        #header {
+            background-color: #131921;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product {
+            display: inline-block;
+            width: 200px;
+            margin: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f5f5f5;"> <!-- Inline CSS -->
+
+    <!-- Header -->
+    <div id="header">
+        <h1 style="color: #ff9900;">Amazon Clone</h1> <!-- Inline CSS -->
+        <p>Shop the best products</p>
+    </div>
+
+    <!-- Products Section -->
+    <div class="container">
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61jovjd+f9L._AC_UL480_FMwebp_QL65_.jpg" alt="Product 1">
+            <h3>Smartphone</h3>
+            <p>₹15,999</p>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71lVwl3q-kL._AC_UL480_FMwebp_QL65_.jpg" alt="Product 2">
+            <h3>Headphones</h3>
+            <p>₹1,499</p>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81p+EkIvUUL._AC_UL480_FMwebp_QL65_.jpg" alt="Product 3">
+            <h3>Laptop</h3>
+            <p>₹49,999</p>
+            <button class="btn">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>© all Rights are reserved by ABDUL KHAISER| Made for Practice</p>
+    </footer>
+
+</body>
+
+</html>

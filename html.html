@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 320px;
+            height: 400px;
+            perspective: 1000px;
+        }
+
+        /* Card */
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease;
+        }
+
+        /* Hidden checkbox triggers flip */
+        #flip:checked~.card {
+            transform: rotateY(180deg);
+        }
+
+        .form {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .form button,
+        .form label {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .form button:hover,
+        .form label:hover {
+            background: #5563c1;
+        }
+
+        /* Back side (Login) */
+        .back {
+            transform: rotateY(180deg);
+        }
+
+        /* Hide the checkbox */
+        #flip {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Checkbox controls the flip -->
+        <input type="checkbox" id="flip">
+
+        <div class="card">
+            <!-- Front: Signup Form -->
+            <div class="form front">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <label for="flip">Sign Up</label>
+            </div>
+
+            <!-- Back: Login Form -->
+            <div class="form back">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Login</button>
+                <label for="flip">Back to Sign Up</label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
